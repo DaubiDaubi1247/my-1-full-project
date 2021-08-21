@@ -1,0 +1,43 @@
+.btn {
+    color: $whiteColor;
+    background-color: $blueColor;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.line::after {
+    content: '';
+    position: absolute;
+    background-color: #d7d7d7;
+    width: 100%;
+    bottom: 0px;
+    height: 20px;
+    left: 0;
+}
+
+.slider__button {
+    button {
+        border-radius: 50%;
+        background-color: rgb(217, 217, 217);
+        border: none;
+        width: 12px;
+        height: 12px;
+    }
+    .button__active,
+    button:focus {
+        border: 2px solid $blueColor;
+        border-radius: 50%;
+        background-color: rgba(125, 125, 125, 0);
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.action {
+    color: $darkGreyColor;
+    border: none;
+    border-radius: 6px;
+    background: #fff;
+}
