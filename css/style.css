@@ -224,7 +224,7 @@ input::placeholder {
   color: #fff;
   text-align: center;
   position: relative;
-  background: url("/img/search/bg.png") no-repeat;
+  background: url("..img/search/bg.png") no-repeat;
   padding: 230px 0 220px 0;
 }
 
