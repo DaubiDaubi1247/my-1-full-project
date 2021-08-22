@@ -62,7 +62,7 @@ body {
     color: $whiteColor;
     text-align: center;
     position: relative;
-    background: url('..img/search/bg.png') no-repeat;
+    background: url('/img/search/bg.png') no-repeat;
     padding: 230px 0 220px 0;
     &__title {
         margin-bottom: 40px;
@@ -88,7 +88,8 @@ body {
         position: relative;
         //Remove original arrows
         -webkit-appearance: none;
-        background: url(..img/search/arrow.png) no-repeat 230px #fff // background: url(/img/search/arrow.png) no-repeat right #fff;
+        // background: url('img/search/arrow.png') no-repeat 230px #fff 
+        background: url(/img/search/arrow.png) no-repeat right #fff;
     }
     // .search__fields-tel
     &__fields-tel {
