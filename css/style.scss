@@ -88,7 +88,7 @@ body {
         position: relative;
         //Remove original arrows
         -webkit-appearance: none;
-        background: url(/img/search/arrow.png) no-repeat 230px #fff // background: url(/img/search/arrow.png) no-repeat right #fff;
+        background: url(..img/search/arrow.png) no-repeat 230px #fff // background: url(/img/search/arrow.png) no-repeat right #fff;
     }
     // .search__fields-tel
     &__fields-tel {
