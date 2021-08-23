@@ -62,7 +62,7 @@ body {
     color: $whiteColor;
     text-align: center;
     position: relative;
-    background: url('/img/search/bg.png') no-repeat;
+    background: url('../img/search/bg.png') no-repeat;
     padding: 230px 0 220px 0;
     &__title {
         margin-bottom: 40px;
@@ -89,7 +89,7 @@ body {
         //Remove original arrows
         -webkit-appearance: none;
         // background: url('img/search/arrow.png') no-repeat 230px #fff 
-        background: url(/img/search/arrow.png) no-repeat right #fff;
+        background: url('../img/search/arrow.png') no-repeat right #fff;
     }
     // .search__fields-tel
     &__fields-tel {
@@ -106,7 +106,7 @@ body {
 .search_2 {
     text-align: left;
     padding: 185px 0;
-    background: url(/img/search/bg2.png) no-repeat;
+    background: url('../img/search/bg2.png') no-repeat;
     .title {
         word-wrap: break-word;
         max-width: 400px;
@@ -445,7 +445,7 @@ body {
         padding: 12px 50px 15px 20px;
         @extend .action;
         -webkit-appearance: none;
-        background: url(/img/search/arrow.png) no-repeat 86px #fff;
+        background: url('../img/search/arrow.png') no-repeat 86px #fff;
         margin-right: 20px;
          :first-child {
             display: none;
