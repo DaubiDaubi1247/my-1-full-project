@@ -48,8 +48,9 @@ ol[class] {
 }
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
-a:not([class]) {
+a {
   text-decoration-skip-ink: auto;
+  text-decoration: none;
 }
 
 /* Упрощаем работу с изображениями */
@@ -224,7 +225,7 @@ input::placeholder {
   color: #fff;
   text-align: center;
   position: relative;
-  background: url("..img/search/bg.png") no-repeat;
+  background: url("../img/search/bg.png") no-repeat;
   padding: 230px 0 220px 0;
 }
 
@@ -249,7 +250,7 @@ input::placeholder {
   color: #d7d7d7;
   position: relative;
   -webkit-appearance: none;
-  background: url(/img/search/arrow.png) no-repeat 230px #fff;
+  background: url("../img/search/arrow.png") no-repeat right #fff;
 }
 
 .search__fields-tel {
@@ -263,7 +264,7 @@ input::placeholder {
 .search_2 {
   text-align: left;
   padding: 185px 0;
-  background: url(/img/search/bg2.png) no-repeat;
+  background: url("../img/search/bg2.png") no-repeat;
 }
 
 .search_2 .title {
@@ -669,7 +670,7 @@ input::placeholder {
 .reviews__header-sort {
   padding: 12px 50px 15px 20px;
   -webkit-appearance: none;
-  background: url(/img/search/arrow.png) no-repeat 86px #fff;
+  background: url("../img/search/arrow.png") no-repeat 86px #fff;
   margin-right: 20px;
 }
 
