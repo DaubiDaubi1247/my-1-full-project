@@ -169,9 +169,4 @@
 //     );
 // }
 
-const link = document.querySelector('.btn');
-console.log(link);
-link.addEventListener('click', function(event) {
-    console.log(event);
-    event.preventDefault();
-})
+'use strict';
