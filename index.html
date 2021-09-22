@@ -465,7 +465,7 @@
             <div class="reviews__header">
                 <p class="reviews__header-count">Reviews(<span id="counter">0</span>)</p>
                 <div class="reviews__header-action">
-                    <select name="sort" id="" class="reviews__header-sort">
+                    <select name="sort" id="" class="reviews__header-sort sort">
                         <option value="sort">sort</option>
                         <option value="town">town</option>
                         <option value="date">date</option>
@@ -588,14 +588,15 @@
     </div>
 
     <section class="ticket">
-        <div class="container">
-            <div class="ticket__sort">
+        <div class="ticket__sort">
+            <div class="wrapper">
                 <p class="ticket__sort-title">
                     Where do you want to travel today?
                 </p>
                 <div class="ticket__sort-wrapper">
                     <div class="ticket__sort-choice">
                         <span>New York</span>
+                        <button class="close"><img src="img/ticket/delete_icn.png" alt=""></button>
                     </div>
                     <div class="ticket__sort-choose">
                         <a href="">List View</a>
@@ -607,6 +608,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container">
 
             <div class="ticket__results">
                 <div class="ticket__results-cards">

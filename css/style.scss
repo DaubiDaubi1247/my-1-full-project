@@ -596,25 +596,70 @@ body {
 // responsive
 .ticket {
     // .ticket__sort
+    background-color: $greyColor;
     &__sort {
+        background-color: $greyBackground;
+        .wrapper {
+            @extend .container;
+        }
         padding: 60px 0;
     }
     // .ticket__sort-title
-    &__sort-title {}
+    &__sort-title {
+        margin-bottom: 30px;
+    }
     // .ticket__sort-wrapper
-    &__sort-wrapper {}
+    &__sort-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
     // .ticket__sort-choice
-    &__sort-choice {}
+    &__sort-choice {
+        background-color: #fff;
+        min-width: 150px;
+        display: flex;
+        border-radius: 6px;
+        padding: 13px 0 13px 19px;
+        justify-content: space-between;
+        button {
+            border: none;
+            background: none;
+            margin-right: 18px;
+        }
+    }
     // .ticket__sort-choose
-    &__sort-choose {}
+    &__sort-choose {
+        a {
+            color: $darkGreyColor;
+            &:active {
+                color: $blueColor;
+            }
+            margin-right: 40px;
+        }
+    }
     // .ticket__sort-list
-    &__sort-list {}
+    &__sort-list {
+        @extend .reviews__header-sort;
+        margin: 0;
+    }
     // .ticket__results
-    &__results {}
+    &__results {
+        &:only-child {
+            background-color: #fff;
+        }
+    }
     // .ticket__results-cards
-    &__results-cards {}
+    &__results-cards {
+        display: flex;
+        justify-content: space-between;
+        &:last-child {
+            margin: 0;
+        }
+    }
     // .ticket__results-item
-    &__results-item {}
+    &__results-item {
+        margin-right: 30px;
+    }
     // .ticket__results-settings
     &__results-settings {}
 }
@@ -623,7 +668,9 @@ body {
 
 .card {
     // .card__text
-    &__text {}
+    &__text {
+        max-width: 130px;
+    }
     // .card__text-title
     &__text-title {}
     // .card__text-rating

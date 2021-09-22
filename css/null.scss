@@ -45,6 +45,16 @@ body {
     line-height: 1.5;
 }
 
+*:focus-visible {
+    outline-style: none;
+    outline-width: 0px !important;
+    outline-color: none !important;
+}
+
+button::-moz-focus-inner {
+    border: 0 !important;
+}
+
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 

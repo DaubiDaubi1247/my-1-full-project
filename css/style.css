@@ -41,6 +41,16 @@ body {
   line-height: 1.5;
 }
 
+*:focus-visible {
+  outline-style: none;
+  outline-width: 0px !important;
+  outline-color: none !important;
+}
+
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
@@ -174,14 +184,14 @@ input::placeholder {
   height: 16px;
 }
 
-.action, .reviews__header-sort, .reviews__header-btn {
+.action, .reviews__header-sort, .ticket__sort-list, .reviews__header-btn {
   color: #868686;
   border: none;
   border-radius: 6px;
   background: #fff;
 }
 
-.container {
+.container, .ticket__sort .wrapper {
   max-width: 1160px;
   padding: 0 5px;
   margin: 0 auto;
@@ -667,14 +677,14 @@ input::placeholder {
   text-align: center;
 }
 
-.reviews__header-sort {
+.reviews__header-sort, .ticket__sort-list {
   padding: 12px 50px 15px 20px;
   -webkit-appearance: none;
   background: url("../img/search/arrow.png") no-repeat 86px #fff;
   margin-right: 20px;
 }
 
-.reviews__header-sort :first-child {
+.reviews__header-sort :first-child, .ticket__sort-list :first-child {
   display: none;
 }
 
@@ -841,7 +851,82 @@ input::placeholder {
   resize: none;
 }
 
+.ticket {
+  background-color: #d7d7d7;
+}
+
 .ticket__sort {
+  background-color: #f6f6f6;
   padding: 60px 0;
+}
+
+.ticket__sort-title {
+  margin-bottom: 30px;
+}
+
+.ticket__sort-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ticket__sort-choice {
+  background-color: #fff;
+  min-width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 6px;
+  padding: 13px 0 13px 19px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ticket__sort-choice button {
+  border: none;
+  background: none;
+  margin-right: 18px;
+}
+
+.ticket__sort-choose a {
+  color: #868686;
+  margin-right: 40px;
+}
+
+.ticket__sort-choose a:active {
+  color: #3ec6ff;
+}
+
+.ticket__sort-list {
+  margin: 0;
+}
+
+.ticket__results:only-child {
+  background-color: #fff;
+}
+
+.ticket__results-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ticket__results-cards:last-child {
+  margin: 0;
+}
+
+.ticket__results-item {
+  margin-right: 30px;
+}
+
+.card__text {
+  max-width: 130px;
 }
 /*# sourceMappingURL=style.css.map */
