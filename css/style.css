@@ -840,4 +840,8 @@ input::placeholder {
 .reviews__popup-content textarea {
   resize: none;
 }
+
+.ticket__sort {
+  padding: 60px 0;
+}
 /*# sourceMappingURL=style.css.map */

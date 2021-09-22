@@ -594,3 +594,106 @@ body {
 }
 
 // responsive
+.ticket {
+    // .ticket__sort
+    &__sort {
+        padding: 60px 0;
+    }
+    // .ticket__sort-title
+    &__sort-title {}
+    // .ticket__sort-wrapper
+    &__sort-wrapper {}
+    // .ticket__sort-choice
+    &__sort-choice {}
+    // .ticket__sort-choose
+    &__sort-choose {}
+    // .ticket__sort-list
+    &__sort-list {}
+    // .ticket__results
+    &__results {}
+    // .ticket__results-cards
+    &__results-cards {}
+    // .ticket__results-item
+    &__results-item {}
+    // .ticket__results-settings
+    &__results-settings {}
+}
+
+.container {}
+
+.card {
+    // .card__text
+    &__text {}
+    // .card__text-title
+    &__text-title {}
+    // .card__text-rating
+    &__text-rating {}
+    // .card__img
+    &__img {}
+    // .card__price
+    &__price {}
+    // .card__review
+    &__review {}
+    // .card__send
+    &__send {}
+    // .card__send-spaces
+    &__send-spaces {}
+    // .card__send-count
+    &__send-count {}
+    // .card__send-submit
+    &__send-submit {}
+}
+
+.stars {}
+
+.count {
+    // .count__reviews
+    &__reviews {}
+}
+
+.wrapper {}
+
+.settings {
+    // .settings__first-block
+    &__first-block {}
+    // .settings__second-block
+    &__second-block {}
+    // .settings__third-block
+    &__third-block {}
+}
+
+.first {
+    // .first__lang
+    &__lang {}
+    // .first__meal
+    &__meal {}
+    // .first__excursion
+    &__excursion {}
+    // .first__hotel
+    &__hotel {}
+    // .first__room
+    &__room {}
+    // .first__car
+    &__car {}
+    // .first__transport
+    &__transport {}
+    // .first__parking
+    &__parking {}
+    // .first__trip
+    &__trip {}
+    // .first__class
+    &__class {}
+    // .first__city
+    &__city {}
+    // .first__price
+    &__price {}
+    // .first__carry
+    &__carry {}
+}
+
+.div {}
+
+.setting {
+    // .setting__third-wrapper
+    &__third-wrapper {}
+}
