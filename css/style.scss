@@ -644,24 +644,65 @@ body {
     }
     // .ticket__results
     &__results {
-        &:only-child {
-            background-color: #fff;
-        }
+        margin-top: 20px;
     }
     // .ticket__results-cards
     &__results-cards {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 20px;
         &:last-child {
             margin: 0;
         }
     }
     // .ticket__results-item
     &__results-item {
+        flex: 1 0 33.333%;
+        max-width: 371px;
+        border-radius: 6px;
+        background-color: #fff;
         margin-right: 30px;
     }
     // .ticket__results-settings
-    &__results-settings {}
+    &__results-settings {
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            &>div {
+                @extend .ticket__results-item;
+                color: $blackColor;
+                padding: 20px 0 20px 20px;
+                div:not([class=div]) {
+                    overflow: hidden;
+                    height: 53px;
+                    position: relative;
+                    border-bottom: 2px solid #000;
+                    border-top: 1px solid #000;
+                    margin-bottom: 5px;
+                    &:active {
+                        div[class=div] {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background-image: url("../img/logo/arrow.jpg");
+                        width: 11px;
+                        height: 7px;
+                        top: 3px;
+                        right: 0;
+                        margin-right: 30px;
+                    }
+                }
+                div[class=div] {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+        }
+    }
 }
 
 .container {}
@@ -669,26 +710,66 @@ body {
 .card {
     // .card__text
     &__text {
-        max-width: 130px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 20px 35px 20px;
     }
     // .card__text-title
-    &__text-title {}
+    &__text-title {
+        font-size: 14px;
+        max-width: 138px;
+        color: $blackColor;
+    }
     // .card__text-rating
     &__text-rating {}
     // .card__img
-    &__img {}
+    &__img {
+        margin-bottom: 20px;
+        position: relative;
+    }
     // .card__price
-    &__price {}
+    &__price {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 75px;
+        height: 35px;
+        background-color: $blueColor;
+        text-align: center;
+        color: $whiteColor;
+        padding-top: 8px;
+    }
     // .card__review
-    &__review {}
+    &__review {
+        position: relative;
+        padding: 0 0px 22px 19px;
+        max-width: 341px;
+        font-size: 14px;
+        // @extend .line;
+    }
     // .card__send
-    &__send {}
+    &__send {
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     // .card__send-spaces
-    &__send-spaces {}
+    &__send-spaces {
+        img {
+            display: inline;
+        }
+        text-align: center;
+    }
     // .card__send-count
     &__send-count {}
     // .card__send-submit
-    &__send-submit {}
+    &__send-submit {
+        a {
+            padding: 17px 50px;
+        }
+    }
 }
 
 .stars {}
@@ -698,11 +779,13 @@ body {
     &__reviews {}
 }
 
-.wrapper {}
-
 .settings {
     // .settings__first-block
-    &__first-block {}
+    &__first-block {
+        // * {
+        //     margin-bottom: 5px;
+        // }
+    }
     // .settings__second-block
     &__second-block {}
     // .settings__third-block

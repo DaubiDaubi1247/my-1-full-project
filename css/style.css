@@ -905,8 +905,8 @@ input::placeholder {
   margin: 0;
 }
 
-.ticket__results:only-child {
-  background-color: #fff;
+.ticket__results {
+  margin-top: 20px;
 }
 
 .ticket__results-cards {
@@ -916,17 +916,132 @@ input::placeholder {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .ticket__results-cards:last-child {
   margin: 0;
 }
 
-.ticket__results-item {
+.ticket__results-item, .ticket__results-settings .wrapper > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 33.333%;
+          flex: 1 0 33.333%;
+  max-width: 371px;
+  border-radius: 6px;
+  background-color: #fff;
   margin-right: 30px;
 }
 
+.ticket__results-settings .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ticket__results-settings .wrapper > div {
+  color: #343434;
+  padding: 20px 0 20px 20px;
+}
+
+.ticket__results-settings .wrapper > div div:not([class=div]) {
+  overflow: hidden;
+  height: 53px;
+  position: relative;
+  border-bottom: 2px solid #000;
+  border-top: 1px solid #000;
+  margin-bottom: 5px;
+}
+
+.ticket__results-settings .wrapper > div div:not([class=div]):active div[class=div] {
+  visibility: visible;
+  opacity: 1;
+}
+
+.ticket__results-settings .wrapper > div div:not([class=div])::after {
+  content: '';
+  position: absolute;
+  background-image: url("../img/logo/arrow.jpg");
+  width: 11px;
+  height: 7px;
+  top: 3px;
+  right: 0;
+  margin-right: 30px;
+}
+
+.ticket__results-settings .wrapper > div div[class=div] {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .card__text {
-  max-width: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 35px 20px 35px 20px;
+}
+
+.card__text-title {
+  font-size: 14px;
+  max-width: 138px;
+  color: #343434;
+}
+
+.card__img {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.card__price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75px;
+  height: 35px;
+  background-color: #3ec6ff;
+  text-align: center;
+  color: #fff;
+  padding-top: 8px;
+}
+
+.card__review {
+  position: relative;
+  padding: 0 0px 22px 19px;
+  max-width: 341px;
+  font-size: 14px;
+}
+
+.card__send {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card__send-spaces {
+  text-align: center;
+}
+
+.card__send-spaces img {
+  display: inline;
+}
+
+.card__send-submit a {
+  padding: 17px 50px;
 }
 /*# sourceMappingURL=style.css.map */
