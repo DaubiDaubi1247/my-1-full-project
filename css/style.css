@@ -928,8 +928,6 @@ input::placeholder {
       -ms-flex: 1 0 33.333%;
           flex: 1 0 33.333%;
   max-width: 371px;
-  border-radius: 6px;
-  background-color: #fff;
   margin-right: 30px;
 }
 
@@ -944,37 +942,6 @@ input::placeholder {
 
 .ticket__results-settings .wrapper > div {
   color: #343434;
-  padding: 20px 0 20px 20px;
-}
-
-.ticket__results-settings .wrapper > div div:not([class=div]) {
-  overflow: hidden;
-  height: 53px;
-  position: relative;
-  border-bottom: 2px solid #000;
-  border-top: 1px solid #000;
-  margin-bottom: 5px;
-}
-
-.ticket__results-settings .wrapper > div div:not([class=div]):active div[class=div] {
-  visibility: visible;
-  opacity: 1;
-}
-
-.ticket__results-settings .wrapper > div div:not([class=div])::after {
-  content: '';
-  position: absolute;
-  background-image: url("../img/logo/arrow.jpg");
-  width: 11px;
-  height: 7px;
-  top: 3px;
-  right: 0;
-  margin-right: 30px;
-}
-
-.ticket__results-settings .wrapper > div div[class=div] {
-  visibility: hidden;
-  opacity: 0;
 }
 
 .card__text {
@@ -1043,5 +1010,92 @@ input::placeholder {
 
 .card__send-submit a {
   padding: 17px 50px;
+}
+
+.setting__text {
+  padding-left: 20px;
+  position: relative;
+}
+
+.setting__text::after {
+  content: '';
+  position: absolute;
+  background-image: url("../img/logo/arrow.jpg");
+  width: 11px;
+  height: 7px;
+  top: 14%;
+  right: 0;
+  margin-right: 30px;
+}
+
+.open {
+  visibility: visible;
+  opacity: 1;
+  height: 125px;
+}
+
+.settings__second-block > div:not(:last-child),
+.settings__first-block > div {
+  background-color: #fff;
+  overflow: hidden;
+  height: 53px;
+  padding: 18px 0px;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+  border-bottom: 2px solid #f7f7f7;
+}
+
+.settings__second-block > div:not(:last-child) div[class=div],
+.settings__first-block > div div[class=div] {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.settings__first-block div:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.settings__first-block div:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.settings__second-block {
+  position: relative;
+}
+
+.settings__second-block > div:last-child {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.settings__second-block .first__lang,
+.settings__second-block .first__trip {
+  margin-bottom: 20px;
+}
+
+.settings__second-block > div {
+  border-radius: 6px;
+}
+
+.settings__second-block .first__class {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 20px;
+  height: 80px;
+}
+
+.settings__second-block .first__class input {
+  margin-right: 25px;
 }
 /*# sourceMappingURL=style.css.map */

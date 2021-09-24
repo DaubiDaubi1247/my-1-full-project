@@ -659,8 +659,6 @@ body {
     &__results-item {
         flex: 1 0 33.333%;
         max-width: 371px;
-        border-radius: 6px;
-        background-color: #fff;
         margin-right: 30px;
     }
     // .ticket__results-settings
@@ -671,35 +669,8 @@ body {
             &>div {
                 @extend .ticket__results-item;
                 color: $blackColor;
-                padding: 20px 0 20px 20px;
-                div:not([class=div]) {
-                    overflow: hidden;
-                    height: 53px;
-                    position: relative;
-                    border-bottom: 2px solid #000;
-                    border-top: 1px solid #000;
-                    margin-bottom: 5px;
-                    &:active {
-                        div[class=div] {
-                            visibility: visible;
-                            opacity: 1;
-                        }
-                    }
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        background-image: url("../img/logo/arrow.jpg");
-                        width: 11px;
-                        height: 7px;
-                        top: 3px;
-                        right: 0;
-                        margin-right: 30px;
-                    }
-                }
-                div[class=div] {
-                    visibility: hidden;
-                    opacity: 0;
-                }
+                // div:not([class=div]),
+                // div:not( [class=setting__text]) {
             }
         }
     }
@@ -779,22 +750,86 @@ body {
     &__reviews {}
 }
 
+.setting__text {
+    padding-left: 20px;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        background-image: url("../img/logo/arrow.jpg");
+        width: 11px;
+        height: 7px;
+        top: 14%;
+        right: 0;
+        margin-right: 30px;
+    }
+}
+
+.open {
+    visibility: visible;
+    opacity: 1;
+    height: 125px;
+}
+
 .settings {
     // .settings__first-block
-    &__first-block {
-        // * {
-        //     margin-bottom: 5px;
-        // }
+    &__second-block>div:not(:last-child),
+    &__first-block>div {
+        background-color: #fff;
+        overflow: hidden;
+        height: 53px;
+        padding: 18px 0px;
+        transition: all ease 1s;
+        border-bottom: 2px solid #f7f7f7;
+        // border-top: 1px solid #000;
+        div[class=div] {
+            visibility: hidden;
+            opacity: 0;
+        }
     }
+    &__first-block div:first-child {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    &__first-block div:last-child {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+    // * {
+    //     margin-bottom: 5px;
     // .settings__second-block
-    &__second-block {}
+    &__second-block {
+        position: relative;
+        &>div:last-child {
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+        }
+        .first__lang,
+        .first__trip {
+            margin-bottom: 20px;
+        }
+        &>div {
+            border-radius: 6px;
+        }
+        .first__class {
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px;
+            height: 80px;
+            input {
+                margin-right: 25px;
+            }
+        }
+    }
     // .settings__third-block
     &__third-block {}
 }
 
 .first {
     // .first__lang
-    &__lang {}
     // .first__meal
     &__meal {}
     // .first__excursion
