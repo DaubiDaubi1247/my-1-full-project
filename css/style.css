@@ -946,66 +946,28 @@ input::placeholder {
           justify-content: space-between;
 }
 
-.ticket__results-settings .wrapper input[type="checkbox"],
-.ticket__results-settings .wrapper input[type="radio"] {
-  display: none;
-}
-
-.ticket__results-settings .wrapper input[type="checkbox"] + label,
-.ticket__results-settings .wrapper input[type="radio"] + label {
-  font: 18px bold;
-  color: #444;
+.ticket__results-settings .wrapper input[type="checkbox"] + label {
   cursor: pointer;
+  color: #868686;
 }
 
-.ticket__results-settings .wrapper input[type="checkbox"] + label::before,
-.ticket__results-settings .wrapper input[type="radio"] + label::before {
-  content: "";
-  display: inline-block;
-  height: 18px;
-  width: 18px;
-  margin: 0 5px 0 0;
-  background-image: url("../img/ticket/icn.png");
-  background-repeat: no-repeat;
-}
-
-.ticket__results-settings .wrapper input[type="checkbox"] + label::before {
-  background-position: -38px -260px;
-}
-
-.ticket__results-settings .wrapper input[type="radio"] + label::before {
-  background-position: 0px -279px;
-}
-
-.ticket__results-settings .wrapper input[type="checkbox"]:checked + label::before {
-  background-position: -114px -260px;
-}
-
-.ticket__results-settings .wrapper input[type="radio"]:checked + label::before {
-  background-position: -108px -279px;
-}
-
-.ticket__results-settings .wrapper input[type="checkbox"]:disabled + label::before {
-  background-position: -152px -260px;
-}
-
-.ticket__results-settings .wrapper input[type="checkbox"]:checked:disabled + label::before {
-  background-position: -171px -260px;
-}
-
-.ticket__results-settings .wrapper input[type="radio"]:disabled + label::before {
-  background-position: -144px -279px;
-}
-
-.ticket__results-settings .wrapper input[type="radio"]:checked:disabled + label::before {
-  background-position: -162px -279px;
+.ticket__results-settings .wrapper input[type="checkbox"] {
+  opacity: 0;
+  z-index: -1;
 }
 
 .ticket__results-settings .wrapper label::before {
   content: '';
   background-image: url("../img/ticket/icn.png");
-  top: 0;
   padding-right: 20px;
+  margin-right: 15px;
+}
+
+.ticket__results-settings .wrapper input[type="checkbox"]:checked + label::before {
+  content: '';
+  background: url("../img/ticket/check_icn.png") no-repeat center center;
+  background-color: #3ec6ff;
+  border-radius: 4px;
 }
 
 .ticket__results-settings .wrapper > div {
@@ -1128,11 +1090,8 @@ input::placeholder {
       -ms-flex-align: center;
           align-items: center;
   padding-left: 20px;
+  padding-right: 30px;
   height: 80px;
-}
-
-.settings__second-block .first__class input {
-  margin-right: 25px;
 }
 
 .can__open {
@@ -1147,7 +1106,6 @@ input::placeholder {
 
 .can__open input {
   margin-bottom: 23px;
-  margin-left: 20px;
 }
 
 .can__open div[class=div] {
@@ -1157,6 +1115,18 @@ input::placeholder {
 
 .open__block {
   height: 125px;
+}
+
+.open__block .setting__text::after {
+  content: '';
+  position: absolute;
+  background: none;
+  background-image: url("../img/ticket/open_arrow.png");
+  width: 11px;
+  height: 7px;
+  top: 14%;
+  right: 0;
+  margin-right: 30px;
 }
 
 .open__block div[class=div] {
@@ -1173,6 +1143,10 @@ input::placeholder {
 }
 
 .first__city :first-child input {
+  margin-bottom: 15px;
+}
+
+.first__carry :first-child input {
   margin-bottom: 15px;
 }
 

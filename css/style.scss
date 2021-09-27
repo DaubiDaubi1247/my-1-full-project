@@ -669,16 +669,27 @@ body {
     // .ticket__results-settings
     &__results-settings {
         .wrapper {
+            input[type="checkbox"]+label {
+                cursor: pointer;
+                color: $darkGreyColor;
+            }
             input[type="checkbox"] {
-                // display: none;
+                opacity: 0;
+                z-index: -1;
             }
             label {
                 &::before {
                     content: '';
                     background-image: url("../img/ticket/icn.png");
-                    top: 0;
                     padding-right: 20px;
+                    margin-right: 15px;
                 }
+            }
+            input[type="checkbox"]:checked+label::before {
+                content: '';
+                background: url("../img/ticket/check_icn.png") no-repeat center center;
+                background-color: $blueColor;
+                border-radius: 4px;
             }
             display: flex;
             justify-content: space-between;
@@ -806,10 +817,8 @@ body {
             justify-content: space-between;
             align-items: center;
             padding-left: 20px;
+            padding-right: 30px;
             height: 80px;
-            input {
-                margin-right: 25px;
-            }
         }
     }
     // .settings__third-block
@@ -822,7 +831,6 @@ body {
     height: 53px;
     input {
         margin-bottom: 23px;
-        margin-left: 20px;
     }
     padding: 18px 0px;
     transition: all ease 1s;
@@ -836,6 +844,17 @@ body {
 
 .open__block {
     height: 125px;
+    .setting__text::after {
+        content: '';
+        position: absolute;
+        background: none;
+        background-image: url("../img/ticket/open_arrow.png");
+        width: 11px;
+        height: 7px;
+        top: 14%;
+        right: 0;
+        margin-right: 30px;
+    }
     div[class=div] {
         visibility: visible;
         opacity: 1;
@@ -878,7 +897,11 @@ body {
     // .first__price
     &__price {}
     // .first__carry
-    &__carry {}
+    &__carry {
+        & :first-child input {
+            margin-bottom: 15px;
+        }
+    }
 }
 
 .div {}
