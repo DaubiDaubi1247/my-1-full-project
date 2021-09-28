@@ -107,9 +107,12 @@ const reviewsBtnSub = document.querySelector('.reviews__popup-btn').onclick = ()
 
 }
 
-const closePopup = document.querySelector('.reviews__popup-body').onclick = () => {
-    reviewsPopup.classList.remove('open');
-}
+document.querySelector('.reviews__popup-body').addEventListener('click', (e) => {
+    if (e.target.classList.contains('reviews__popup-body')) {
+        reviewsPopup.classList.remove('open');
+        document.querySelector('body').style.overflow = 'visible'
+    }
+})
 
 function sortDate(date) {;
     return date.split('.').reduceRight((str, el) => {
