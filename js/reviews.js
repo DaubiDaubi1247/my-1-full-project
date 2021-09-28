@@ -101,6 +101,8 @@ const reviewsBtnSub = document.querySelector('.reviews__popup-btn').onclick = ()
 
 
     reviewsPopup.classList.remove('open');
+    document.querySelector('body').style.overflow = 'visible'
+
 
     const countReviews = document.querySelector('#counter');
     countReviews.textContent = position;

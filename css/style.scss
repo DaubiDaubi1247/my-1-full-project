@@ -22,8 +22,7 @@ body {
 @import "inputs.scss";
 @import "btn.scss";
 .container {
-    max-width: 1160px;
-    padding: 0 5px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 
@@ -595,6 +594,7 @@ body {
 
 // responsive
 .ticket {
+    padding-bottom: 20px;
     // .ticket__sort
     background-color: $greyColor;
     &__sort {
@@ -664,11 +664,12 @@ body {
     &__results-item {
         flex: 1 0 33.333%;
         max-width: 371px;
-        margin-right: 30px;
+        margin-right: 25px;
     }
     // .ticket__results-settings
     &__results-settings {
         .wrapper {
+            margin-bottom: 20px;
             input[type="checkbox"]+label {
                 cursor: pointer;
                 color: $darkGreyColor;
@@ -694,16 +695,15 @@ body {
             display: flex;
             justify-content: space-between;
             &>div {
+                &:last-child {
+                    margin: 0;
+                }
                 @extend .ticket__results-item;
                 color: $blackColor;
-                // div:not([class=div]),
-                // div:not( [class=setting__text]) {
             }
         }
     }
 }
-
-.container {}
 
 .card {
     // .card__text
@@ -793,6 +793,11 @@ body {
     }
 }
 
+.second-block__flex>div,
+.first__class {
+    border-radius: 6px;
+}
+
 .settings {
     // .settings__first-block
     &__first-block div:first-child {
@@ -804,12 +809,12 @@ body {
         border-bottom-right-radius: 6px;
     }
     &__second-block {
+        .first__lang.open__block {
+            height: 179px;
+        }
         .first__lang,
         .first__trip {
             margin-bottom: 20px;
-        }
-        &>div {
-            border-radius: 6px;
         }
         .first__class {
             background-color: #fff;
@@ -917,6 +922,41 @@ body {
             background-color: #fff;
             &:not(:last-child()) {
                 margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.ticket {
+    // .ticket__slider
+    &__slider {
+        background-color: $whiteColor;
+        padding: 20px 30px;
+        border-radius: 6px;
+    }
+    &__slider {
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    .slider {
+        // .slider__btn
+        &__btn {
+            button {
+                padding: 0;
+                background: none;
+                border: none;
+            }
+        }
+        // .slider__num
+        &__num {
+            &:last-child {
+                margin: 0;
+            }
+            span {
+                margin-right: 30px;
             }
         }
     }
