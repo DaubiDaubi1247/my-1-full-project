@@ -1204,4 +1204,22 @@ input::placeholder {
 .ticket .slider__num span {
   margin-right: 30px;
 }
+
+.video {
+  background-image: url(../img/video/bg.png);
+}
+
+.video__wrapper {
+  text-align: center;
+}
+
+.video__vid {
+  position: relative;
+}
+
+.video__controls #play {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
 /*# sourceMappingURL=style.css.map */

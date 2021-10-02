@@ -961,3 +961,26 @@ body {
         }
     }
 }
+
+.video {
+    // .video__wrapper
+    background-image: url(../img/video/bg.png);
+    &__wrapper {
+        text-align: center;
+    }
+    // .video__title
+    &__title {}
+    // .video__vid
+    &__vid {
+        // если тут позишин то пропадает .... пиздец
+        position: relative;
+    }
+    // .video__controls
+    &__controls {
+        #play {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+        }
+    }
+}
