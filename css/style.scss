@@ -969,18 +969,25 @@ body {
         text-align: center;
     }
     // .video__title
-    &__title {}
+    &__title {
+        font-weight: 400;
+        padding-top: 54px;
+        color: $whiteColor;
+    }
     // .video__vid
     &__vid {
-        // если тут позишин то пропадает .... пиздец
         position: relative;
     }
     // .video__controls
     &__controls {
         #play {
             position: absolute;
-            top: 0%;
-            left: 0%;
+            top: 36%;
+            left: 45%;
+            background: transparent;
+            button {
+                padding: 0;
+            }
         }
     }
 }

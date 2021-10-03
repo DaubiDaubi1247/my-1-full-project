@@ -95,7 +95,8 @@ select {
   }
 }
 
-input {
+input,
+button {
   padding: 0;
   margin: 0;
   border: 0;
@@ -1213,13 +1214,24 @@ input::placeholder {
   text-align: center;
 }
 
+.video__title {
+  font-weight: 400;
+  padding-top: 54px;
+  color: #fff;
+}
+
 .video__vid {
   position: relative;
 }
 
 .video__controls #play {
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 36%;
+  left: 45%;
+  background: transparent;
+}
+
+.video__controls #play button {
+  padding: 0;
 }
 /*# sourceMappingURL=style.css.map */
