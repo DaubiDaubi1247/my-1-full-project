@@ -157,7 +157,7 @@ input::placeholder {
   text-decoration: none;
 }
 
-.line::after, .header::after, .search::after, .magical::after, .towns::after, .visited::after, .subscribe::after, .contact::after, .reviews::after {
+.line::after, .header::after, .search::after, .magical::after, .towns::after, .visited::after, .subscribe::after, .contact::after, .reviews::after, .video::after, .download::after {
   content: '';
   position: absolute;
   background-color: #d7d7d7;
@@ -1207,6 +1207,7 @@ input::placeholder {
 }
 
 .video {
+  position: relative;
   background-image: url(../img/video/bg.png);
 }
 
@@ -1217,11 +1218,13 @@ input::placeholder {
 .video__title {
   font-weight: 400;
   padding-top: 54px;
+  margin-bottom: 15px;
   color: #fff;
 }
 
 .video__vid {
   position: relative;
+  padding-bottom: 40px;
 }
 
 .video__controls #play {
@@ -1233,5 +1236,39 @@ input::placeholder {
 
 .video__controls #play button {
   padding: 0;
+}
+
+.download {
+  padding-top: 24px;
+  padding-bottom: 20px;
+  position: relative;
+  background-color: #f6f6f6;
+}
+
+.download__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.download__img {
+  margin-right: 100px;
+}
+
+.download__text-title {
+  margin-bottom: 20px;
+}
+
+.download__text-subtitle {
+  margin-bottom: 30px;
+}
+
+.download__btn {
+  padding: 20px 0;
+  max-width: 272px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

@@ -964,6 +964,8 @@ body {
 
 .video {
     // .video__wrapper
+    position: relative;
+    @extend .line;
     background-image: url(../img/video/bg.png);
     &__wrapper {
         text-align: center;
@@ -972,11 +974,13 @@ body {
     &__title {
         font-weight: 400;
         padding-top: 54px;
+        margin-bottom: 15px;
         color: $whiteColor;
     }
     // .video__vid
     &__vid {
         position: relative;
+        padding-bottom: 40px;
     }
     // .video__controls
     &__controls {
@@ -989,5 +993,38 @@ body {
                 padding: 0;
             }
         }
+    }
+}
+
+.download {
+    padding-top: 24px;
+    padding-bottom: 20px;
+    position: relative;
+    @extend .line;
+    background-color: $greyBackground;
+    // .download__wrapper
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+    // .download__img
+    &__img {
+        margin-right: 100px;
+    }
+    // .download__text
+    &__text {}
+    // .download__text-title
+    &__text-title {
+        margin-bottom: 20px;
+    }
+    // .download__text-subtitle
+    &__text-subtitle {
+        margin-bottom: 30px;
+    }
+    // .download__btn
+    &__btn {
+        padding: 20px 0;
+        max-width: 272px;
+        text-align: center;
     }
 }
