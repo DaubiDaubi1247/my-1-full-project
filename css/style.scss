@@ -1028,3 +1028,31 @@ body {
         text-align: center;
     }
 }
+
+.footer {
+    // .footer__wrapper
+    padding-top: 80px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .navigation {
+        max-width: 110px;
+        a {
+            color: #868686;
+            margin-bottom: 20px;
+            display: block;
+        }
+    }
+    .nav {
+        // .nav__title
+        &__title {
+            margin-bottom: 40px;
+            color: $blackColor;
+            line-height: 30px;
+        }
+    }
+    .subscribe {}
+    .links {}
+    .navigation__sub {}
+}

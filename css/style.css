@@ -1271,4 +1271,33 @@ input::placeholder {
   max-width: 272px;
   text-align: center;
 }
+
+.footer {
+  padding-top: 80px;
+}
+
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .navigation {
+  max-width: 110px;
+}
+
+.footer .navigation a {
+  color: #868686;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.footer .nav__title {
+  margin-bottom: 40px;
+  color: #343434;
+  line-height: 30px;
+}
 /*# sourceMappingURL=style.css.map */
