@@ -1056,3 +1056,13 @@ body {
     .links {}
     .navigation__sub {}
 }
+
+.map {
+    position: relative;
+    @extend .line;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+}
